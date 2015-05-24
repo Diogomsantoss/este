@@ -1,25 +1,31 @@
 import Component from '../components/component.react';
 import React from 'react';
 import {Link} from 'react-router';
+import {Toolbar, ToolbarGroup, FontIcon, TextField} from 'material-ui';
+import SearchBox from '../components/searchbox.react';
+require('../styles/style.less');
+
+
+class SearchResults extends Component {
+  constructor(props) {
+    super(props);
+  }
+}
+
+
 
 class Menu extends Component {
 
   render() {
     return (
-      <header>
-        <h1>
-          <a href="https://github.com/steida/este">Este.js</a> App
-        </h1>
-        <ul>
-          <li><Link to="home">Home</Link></li>
-          <li><Link to="todos">Todos</Link></li>
-          <li><Link to="me">Me (protected)</Link></li>
-          {/* Note simple rule: Never put HTML and JS into the same line.*/}
-          {!this.props.isLoggedIn &&
-            <li><Link to="login">Login</Link></li>
-          }
-        </ul>
-      </header>
+        <Toolbar>
+          <ToolbarGroup key={0} float="left">
+            <h3 className="h1-style">Wikipedia Search</h3>
+          </ToolbarGroup>
+          <ToolbarGroup key={1} float="right">
+            <SearchBox defaultText="Search..."/>
+          </ToolbarGroup>
+        </Toolbar>
     );
   }
 

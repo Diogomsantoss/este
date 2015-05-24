@@ -27,7 +27,7 @@ export default {
       cancelEdit: `You have unsaved changes. Are you sure you want to cancel them?`
     },
     home: {
-      title: 'Este.js App'
+      title: 'Something Awesome'
     },
     me: {
       title: 'Me',

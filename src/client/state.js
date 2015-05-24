@@ -1,6 +1,7 @@
 import State from '../lib/state';
 import reviveAuth from './auth/revive';
 import reviveTodos from './todos/revive';
+import reviveWiki from './app/revive';
 
 const initialState = process.env.IS_BROWSER
   ? window._appState
@@ -12,6 +13,7 @@ export const state = new State(initialState, function(key, value) {
   switch (key) {
     case 'auth': return reviveAuth(value);
     case 'todos': return reviveTodos(value);
+    case 'app': return reviveWiki();
   }
 });
 

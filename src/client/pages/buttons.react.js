@@ -3,20 +3,23 @@ import Component from '../components/component.react';
 import React from 'react';
 // import {FormattedMessage} from 'react-intl';
 import {msg} from '../intl/store';
+import {RaisedButton} from 'material-ui';
 
 class ToCheck extends Component {
 
   render() {
     return (
       <div className="buttons">
-        <button
-          children={msg('todos.clearAll')}
+        <RaisedButton
+          label={msg('todos.clearAll')}
           disabled={!this.props.clearAllEnabled}
           onClick={actions.clearAll}
-        />
-        <button
-          children={msg('todos.add100')}
+          primary={true}
+        />{' '}
+        <RaisedButton
+          label={msg('todos.add100')}
           onClick={actions.addHundredTodos}
+          secondary={true}
         />
         {/* TODO: Reimplement undo. */}
         {/*<button

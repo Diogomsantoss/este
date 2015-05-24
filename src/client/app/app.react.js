@@ -93,9 +93,7 @@ class App extends Component {
         <Menu isLoggedIn={this.state.isLoggedIn} />
         <RouteHandler {...this.state} />
         <footer>
-          <p>
-            made by <a href="https://twitter.com/steida">steida</a>
-          </p>
+
         </footer>
       </div>
     );
