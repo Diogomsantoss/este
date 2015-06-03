@@ -6,8 +6,9 @@ import DocumentTitle from 'react-document-title';
 import React from 'react';
 import {Paper} from 'material-ui';
 import Radium from 'radium';
-import SortableItem from 'react-sortable-item';
 require('../styles/style.less');
+var ThemeManager = require('material-ui/lib/styles/theme-manager')();
+var Colors = require('material-ui/lib/styles/colors');
 
 var styles = {
   normal: {

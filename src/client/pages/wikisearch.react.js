@@ -11,12 +11,6 @@ import ResultItem from '../components/ResultItem';
 require('../styles/style.less');
 
 class WikiSearch extends Component {
-
-  handleDrop(dropPath, position, event) {}
-
-  handleAcceptTest(even) {}
-
-
   render() {
     const results = this.props.app.get('list').map((result, index) => {
       return (
@@ -25,14 +19,15 @@ class WikiSearch extends Component {
           authorLink={`http://www.freecodecamp.com/${result.author.username}`}
           authorImage={result.author.picture}
           headline={result.headline}
-          storyLink={`http://www.freecodecamp.com/news/${result.storyLink.replace(/\s/g, '-')}`}
+          storyLink={`http://www.freecodecamp.com/news/${result.storyLink.
+            replace(/\s/g, '-')}`}
         />
       );
     });
 
 
     return (
-      <DocumentTitle title="WikiSearch 1.0">
+      <DocumentTitle title="Camper News">
         <div className="wiki-search">
           <ul>
             {results}
