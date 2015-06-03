@@ -5,12 +5,12 @@ import Me from './pages/me.react';
 import NotFound from './pages/notfound.react';
 import React from 'react';
 import Todos from './pages/todos.react';
-import WikiSearch from './pages/wikisearch.react.js'
+import WikiSearch from './pages/wikisearch.react.js';
 import {DefaultRoute, NotFoundRoute, Route} from 'react-router';
 
 export default (
   <Route handler={App} path="/">
-    <DefaultRoute handler={WikiSearch} name="search" />
+    <DefaultRoute handler={WikiSearch} name="home" />
     <NotFoundRoute handler={NotFound} name="not-found" />
     <Route handler={Login} name="login" />
     <Route handler={Me} name="me" />

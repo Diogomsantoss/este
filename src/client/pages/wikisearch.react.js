@@ -4,32 +4,30 @@ import React from 'react';
 import {Link} from 'react-router';
 import {msg} from '../intl/store';
 import injectTapEventPlugin from 'react-tap-event-plugin';
-import {RaisedButton, Paper} from 'material-ui';
 import immutable from 'immutable';
-import Radium from 'radium'
+import Radium from 'radium';
+import ResultItem from '../components/ResultItem';
 
 require('../styles/style.less');
 
-var styles = {
-  normal: {
-    backgroundColor: '#9D9694'
-  },
-  hover: {
-    backgroundColor: 'white'
-  }
-};
 class WikiSearch extends Component {
+
+  handleDrop(dropPath, position, event) {}
+
+  handleAcceptTest(even) {}
 
 
   render() {
     const results = this.props.app.get('list').map((result, index) => {
       return (
-        <li key={index}>
-          <Paper zDepth={1} style={style}>
-            <p>{result}</p>
-          </Paper>
-        </li>
-      )
+        <ResultItem
+          key={index}
+          authorLink={`http://www.freecodecamp.com/${result.author.username}`}
+          authorImage={result.author.picture}
+          headline={result.headline}
+          storyLink={`http://www.freecodecamp.com/news/${result.storyLink.replace(/\s/g, '-')}`}
+        />
+      );
     });
 
 
@@ -47,5 +45,5 @@ class WikiSearch extends Component {
 
 WikiSearch = Radium.Enhancer(WikiSearch);
 
-export default WikiSearch
+export default WikiSearch;
 

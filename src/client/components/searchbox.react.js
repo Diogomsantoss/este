@@ -5,10 +5,11 @@ import * as actions from '../app/actions';
 require('../styles/style.less');
 
 const action = debounce(function (e) {
-      console.log(e.target.value);
-      if (e.target.value) {
+      if (e.target.value)
         actions.executeSearch(e.target.value);
-      }
+      else
+        e.target.value = '';
+
     }, 1000);
 
 class SearchBox extends Component {
@@ -36,7 +37,7 @@ class SearchBox extends Component {
 
 }
 
-export default SearchBox
+export default SearchBox;
 
 SearchBox.propTypes = {
   defaultText: React.PropTypes.string.isRequired

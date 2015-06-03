@@ -13,7 +13,7 @@ export const state = new State(initialState, function(key, value) {
   switch (key) {
     case 'auth': return reviveAuth(value);
     case 'todos': return reviveTodos(value);
-    case 'app': return reviveWiki();
+    case 'app': return reviveWiki(value);
   }
 });
 

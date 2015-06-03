@@ -72,7 +72,7 @@ class App extends Component {
         console.log('To debug app state, type _appState and press enter.');
         /*eslint-enable */
         break;
-      case 12:
+      case 13:
         const stateStr = window.prompt('Paste the serialized state into the input'); // eslint-disable-line no-alert
         const newState = JSON.parse(stateStr);
         if (!newState) return;

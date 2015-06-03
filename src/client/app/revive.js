@@ -1,6 +1,7 @@
 import {Map} from 'immutable';
 
-export default function() {
+export default function(value) {
   return Map()
-    .set('list', []);
+    .set('list', value.get('list'));
 }
+

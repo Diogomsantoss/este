@@ -5,10 +5,12 @@ import config from './config';
 import express from 'express';
 // import favicon from 'serve-favicon';
 import render from './render';
+import api from './api/test';
 
 export default function() {
 
   const app = express();
+  const router = express.Router();
 
   app.use(compression());
   // TODO: Add favicon.
@@ -16,6 +18,7 @@ export default function() {
   // TODO: Move to CDN.
   app.use('/build', express.static('build'));
   app.use('/assets', express.static('assets'));
+  app.use('/api', api);
 
   app.get('*', (req, res) => {
     const acceptsLanguages = req.acceptsLanguages(config.appLocales);
