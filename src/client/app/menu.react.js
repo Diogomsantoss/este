@@ -52,6 +52,7 @@ class Menu extends Component {
       accent1Color: Colors.deepOrange500
     });
   }
+
   render() {
     const menuItems = filterOptions.map((elem, index) => {
       return (
