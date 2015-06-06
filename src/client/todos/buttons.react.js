@@ -5,7 +5,7 @@ import React from 'react';
 import {msg} from '../intl/store';
 import {RaisedButton} from 'material-ui';
 
-class ToCheck extends Component {
+class TodoButtons extends Component {
 
   render() {
     return (
@@ -35,8 +35,8 @@ class ToCheck extends Component {
 
 }
 
-ToCheck.propTypes = {
+TodoButtons.propTypes = {
   clearAllEnabled: React.PropTypes.bool.isRequired
 };
 
-export default ToCheck;
+export default TodoButtons;

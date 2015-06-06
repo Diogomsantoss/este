@@ -36,7 +36,7 @@ class Login extends Component {
     return (
       <DocumentTitle title={msg('auth.title')}>
         <div className="login">
-          <form onSubmit={e => this.onFormSubmit(e)}>
+          <form onSubmit={(e) => this.onFormSubmit(e)}>
             <fieldset disabled={actions.login.pending}>
               <legend>{msg('auth.form.legend')}</legend>
               <input
